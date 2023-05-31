@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Challenge ONE | React - AluraFlix
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center" >
+     <img width="600" heigth="600" src="https://user-images.githubusercontent.com/95771285/223713954-12e40b76-7710-4e4c-9c00-4d8eb2512b02.png">
+</p>
 
-## Available Scripts
+### Seja bem vindo ao projeto base do AluraFlix! Passos fundamentais:
 
-In the project directory, you can run:
+### Marque esse projeto com uma estrela ⭐
+### Siga as instruções das aulas e conteúdos 📚
+### Visite a página do Challenge [Clicando aqui!](https://www.alura.com.br/challenges/oracle-one-front-end/aluraflix) 📃
+---
 
-### `npm start`
+## Como listar o meu projeto neste Challenge?
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1) Publique o projeto no Github
+2) Publique no Github Pages: [Como publicar meu projeto com GitHub Pages?](https://docs.github.com/pt/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+3) Utilize o tópico:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  - **challengeonealuraflixbr4**
+  
+ Vá na aba "Sobre" ou "About" do seu projeto no menu lateral que fica na esquerda dentro do repositório no Github e adicione a tag "**challengeonealuraflixbr4**".
+ 
+![gif-vitrine](https://user-images.githubusercontent.com/91544872/153601047-62aee6cb-e3cf-42b3-92c3-7130c996113f.gif)
 
-### `npm test`
+## Como realizar a entrega final do meu projeto?
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4) Preenche o formulário de entrega com o **link do projeto publicado no Github Pages**
 
-### `npm run build`
+🔹 [Link para o formulário](https://lp.alura.com.br/alura-latam-entrega-challenge-one-portugues-front-end)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://user-images.githubusercontent.com/92184087/208179699-a9fc5b9e-c9b5-4dab-a711-43ddfbcd00d0.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5) Acesse seu e-mail e terá a sua Badge Exclusiva do Desafio 🏆
+6) Não se esqueça de publicar um link ou vídeo do seu projeto no LinkedIn! 🏁
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    <a href="https://www.linkedin.com/company/alura-latam/mycompany/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>    
