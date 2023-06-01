@@ -1,6 +1,5 @@
 import React from 'react';
-import Footer from '../../Components/Footer/Footer';
-import Header from '../../Components/Header/Header';
+import Container from '../../Components/Container/Container';
 
 import './About.css';
 
@@ -8,8 +7,14 @@ const About = ({dataCss}) => {
   
   return (
     <>
-      <Header dataCss={dataCss}/>
-      <Footer dataCss={dataCss}/>
+      <Container 
+        main={
+          <>
+            Página About
+          </>
+        }
+        dataCss={dataCss}
+      /> 
     </>
   );
 }
