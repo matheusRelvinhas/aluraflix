@@ -1,16 +1,16 @@
 import React from 'react';
 import Container from '../../Components/Container/Container';
+import Form from '../../Components/Form/Form';
+import './NewVideo.css';
 
-import './About.css';
-
-const About = ({dataCss}) => {
+const NewVideo = ({dataCss}) => {
   
   return (
     <>
       <Container 
         main={
           <>
-            Página About
+            <Form />
           </>
         }
         dataCss={dataCss}
@@ -19,4 +19,4 @@ const About = ({dataCss}) => {
   );
 }
 
-export default About;
+export default NewVideo;

@@ -1,53 +1,47 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
+import MyContext from '../../Context/MyContext';
+import VideoCard from '../VideoCard/VideoCard';
 import './Carousel.css';
-import Slider from './Slider/Slider';
 
-const Carousel = (/*{category , images*/) => {  
-  
-  const dataCarousel = { // cor principal de fundo, header(banner) e footer 
-    category: ['Anime', 'Comédia'],
-    images: [
-      'https://i.postimg.cc/qMgcMZ4d/ifood01-card.webp', 
-      'https://i.postimg.cc/KzN7461m/bebidas01-card.webp'
-    ]
-  }
+const Carousel = () => {
 
-  const dataCard = [ // informações do card(main)
-    [
-      { // images 512x512
-        title: 'Peça pelo Whats',
-        text: 'Mande uma mensagem e vamos te atender',
-        image: 'https://i.postimg.cc/kXkSMJTx/whats01-card.webp'
-      },
-      {
-        title: 'Peça pelo Ifood',
-        text: 'Consulte nossas promoções no ifood',
-        image: 'https://i.postimg.cc/kXkSMJTx/whats01-card.webp'
-      }
-    ],
-    [
-      { // images 512x512
-        title: 'Peça pelo Whats2',
-        text: 'Mande uma mensagem e vamos te atender2',
-        image: 'https://i.postimg.cc/qMgcMZ4d/ifood01-card.webp'
-      },
-      {
-        title: 'Peça pelo Ifood2',
-        text: 'Consulte nossas promoções no ifood2',
-        image: 'https://i.postimg.cc/qMgcMZ4d/ifood01-card.webp'
-      }
-    ],
-  ]
-  
+  const { dataCategory, dataFilm } = useContext(MyContext);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToNextSlide = () => {
+    setCurrentIndex((currentIndex + 1) % dataCategory.image.length);
+
+  };
+
+  const goToPreviousSlide = () => {
+    setCurrentIndex((currentIndex - 1 + dataCategory.image.length) % dataCategory.image.length);
+
+  };
+
   return (
-    <div className='card'>
-      <Slider 
-        images={dataCarousel.images} 
-        category={dataCarousel.category}
-        dataCard={dataCard}
-      />
+    <div className="carousel">
+      <div>
+        <button className="carousel-button prev" onClick={goToPreviousSlide}>
+          &#8249;
+        </button>
+        <img className="carousel-image" src={dataCategory.image[currentIndex]} alt="Slide" />
+        <button className="carousel-button next" onClick={goToNextSlide}>
+          &#8250;
+        </button>
+        <h2>{dataCategory.category[currentIndex]}</h2>
+      </div>
+      <div className='card-content'>
+        {dataFilm[currentIndex].map(card => <VideoCard
+          title= {card.title}
+          text= {card.text}
+          image= {card.image}
+        />)}
+      </div>
     </div>
-  ); 
-}
+  );
+};
 
 export default Carousel;
+
+
