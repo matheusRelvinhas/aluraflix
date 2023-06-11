@@ -9,7 +9,7 @@ function TextField({ label, value, onChange }) {
   return (
     <div>
       <label>{label}</label>
-      <input type="text" value={value} onChange={handleChange} />
+      <input type="text" value={value} onChange={handleChange} required={true} />
     </div>
   );
 }
