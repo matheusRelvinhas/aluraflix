@@ -4,14 +4,14 @@ import TextField from '../TextField/TextField';
 
 function Form() {
  
-  const { dataCategory } = useContext(MyContext);
+  const { dataCategory, addData, dataFilm } = useContext(MyContext);
  
   const [formValues, setFormValues] = useState({
-    nome: '',
-    descricao: '',
-    imagem: '',
+    title: '',
+    text: '',
+    image: '',
     video: '',
-    categoria:'',
+    category:'',
   });
 
   const handleChange = (text, value) => {
@@ -23,25 +23,33 @@ function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevenir a atualização da página
-    console.log(formValues); // Código do submit
+    addData(formValues)
+    console.log(dataFilm); // Código do submit
+    setFormValues({ // Reseta os valores do formulário para vazio após a submissão
+      title: '',
+      text: '',
+      image: '',
+      video: '',
+      category:''
+    });
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <TextField
         label="Nome"
-        value={formValues.nome}
-        onChange={(value) => handleChange('nome', value)}
+        value={formValues.title}
+        onChange={(value) => handleChange('title', value)}
       />
       <TextField
         label="Descrição"
-        value={formValues.descricao}
-        onChange={(value) => handleChange('descricao', value)}
+        value={formValues.text}
+        onChange={(value) => handleChange('text', value)}
       />
       <TextField
         label="Imagem"
-        value={formValues.imagem}
-        onChange={(value) => handleChange('imagem', value)}
+        value={formValues.image}
+        onChange={(value) => handleChange('image', value)}
       />
       <TextField
         label="Vídeo"
@@ -50,7 +58,7 @@ function Form() {
       />
       <div className="lista-suspensa">
         <label>Categoria</label>
-        <select onChange={(value) => handleChange('categoria', value.target.value)} required={true} value={formValues.categoria}>
+        <select onChange={(value) => handleChange('category', value.target.value)} required={true} value={formValues.category}>
           <option value=''></option>
           {dataCategory.category.map(category => <option key={category}>{category}</option>)}
         </select>

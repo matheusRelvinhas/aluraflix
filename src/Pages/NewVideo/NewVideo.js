@@ -3,7 +3,7 @@ import Container from '../../Components/Container/Container';
 import Form from '../../Components/Form/Form';
 import './NewVideo.css';
 
-const NewVideo = ({dataCss}) => {
+const NewVideo = () => {
   
   return (
     <>
@@ -13,7 +13,6 @@ const NewVideo = ({dataCss}) => {
             <Form />
           </>
         }
-        dataCss={dataCss}
       /> 
     </>
   );

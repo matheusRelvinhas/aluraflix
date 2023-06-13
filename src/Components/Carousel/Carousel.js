@@ -36,6 +36,8 @@ const Carousel = () => {
           title= {card.title}
           text= {card.text}
           image= {card.image}
+          video={card.video}
+          key={card.title}
         />)}
       </div>
     </div>

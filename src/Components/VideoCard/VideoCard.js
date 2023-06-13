@@ -1,7 +1,7 @@
 import React from 'react';
 import './VideoCard.css';
 
-const VideoCard = ({title , text, image}) => {  
+const VideoCard = ({title , text, image, video}) => {  
   return (
     <div className='card'>
       <img src={image} alt='video-img' />
