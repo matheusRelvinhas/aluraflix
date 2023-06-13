@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import MyContext from '../../Context/MyContext';
 import TextField from '../TextField/TextField';
+import './Form.css';
 
 function Form() {
  
@@ -63,7 +65,9 @@ function Form() {
           {dataCategory.category.map(category => <option key={category}>{category}</option>)}
         </select>
       </div>
-      <button type="submit">Salvar</button>
+      <Link to='/'>
+        <button type="submit">Salvar</button>
+      </Link>
     </form>
   );
 }

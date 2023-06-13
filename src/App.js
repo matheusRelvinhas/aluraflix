@@ -3,6 +3,7 @@ import MyContext from './Context/MyContext';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './Pages/HomePage/HomePage';
 import NewVideo from './Pages/NewVideo/NewVideo';
+import VideoPage from './Pages/Video/VideoPage';
 
 
 function App() {
@@ -66,6 +67,13 @@ function App() {
       }
     ],
   ]);
+  
+  const [currentVideo, setCurrentVideo] = useState({
+    title: 'teste',
+    text:  'teste',
+    image: 'teste',
+    video: 'teste'
+  });
 
   const addData = (value) => {
     const newObj = {
@@ -86,20 +94,33 @@ function App() {
       setDataFilm(newDataFilm);
     } else {}
   };
+  
+  const addCurrentVideo = (value) =>  {
+    const video = {
+      title: value.title,
+      text:  value.text,
+      image: value.image,
+      video: value.video
+    }
+    setCurrentVideo(video)
+  }
 
   const sharedData = {
     dataCss,
     dataCategory,
     dataFilm,
-    addData
+    currentVideo,
+    addData,
+    addCurrentVideo
   };
 
   return (
       <Router>
         <MyContext.Provider value={sharedData}>
           <Routes>
-            <Route path="/" element={<HomePage />}/>
-            <Route path="/newVideo" element={<NewVideo />}/>
+            <Route path='/' element={<HomePage />}/>
+            <Route path='/newVideo' element={<NewVideo />}/>
+            <Route path='/videoPage' element={<VideoPage />}/>
           </Routes>
         </MyContext.Provider>
       </Router>

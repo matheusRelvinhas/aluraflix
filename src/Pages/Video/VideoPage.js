@@ -1,15 +1,14 @@
-import React from 'react';
-import Container from '../../Components/Container/Container';
-import Form from '../../Components/Form/Form';
 
-const NewVideo = () => {
-  
+import Container from '../../Components/Container/Container';
+import Video from '../../Components/Video/Video';
+
+const VideoPage = () => {
   return (
     <>
       <Container 
         main={
           <>
-            <Form />
+            <Video />
           </>
         }
       /> 
@@ -17,4 +16,4 @@ const NewVideo = () => {
   );
 }
 
-export default NewVideo;
+export default VideoPage;
