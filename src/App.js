@@ -5,7 +5,6 @@ import HomePage from './Pages/HomePage/HomePage';
 import NewVideo from './Pages/NewVideo/NewVideo';
 import VideoPage from './Pages/VideoPage/VideoPage';
 
-
 function App() {
 
   const dataCategory = {

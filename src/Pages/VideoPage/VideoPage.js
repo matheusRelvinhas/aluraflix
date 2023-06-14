@@ -1,4 +1,3 @@
-
 import Container from '../../Components/Container/Container';
 import Video from '../../Components/Video/Video';
 

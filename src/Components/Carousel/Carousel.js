@@ -12,12 +12,10 @@ const Carousel = () => {
 
   const goToNextSlide = () => {
     setCurrentIndex((currentIndex + 1) % dataCategory.image.length);
-
   };
 
   const goToPreviousSlide = () => {
     setCurrentIndex((currentIndex - 1 + dataCategory.image.length) % dataCategory.image.length);
-
   };
 
   return (
@@ -45,5 +43,3 @@ const Carousel = () => {
 };
 
 export default Carousel;
-
-
