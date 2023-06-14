@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import MyContext from '../../Context/MyContext';
 import TextField from '../TextField/TextField';
 import './Form.css';
@@ -7,7 +7,8 @@ import './Form.css';
 function Form() {
  
   const { dataCategory, addData, dataFilm } = useContext(MyContext);
- 
+  const navigate = useNavigate();
+
   const [formValues, setFormValues] = useState({
     title: '',
     text: '',
@@ -34,10 +35,11 @@ function Form() {
       video: '',
       category:''
     });
+    navigate('/'); // volta para página inical
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='form'>
       <TextField
         label="Nome"
         value={formValues.title}
@@ -58,16 +60,14 @@ function Form() {
         value={formValues.video}
         onChange={(value) => handleChange('video', value)}
       />
-      <div className="lista-suspensa">
+      <div className="dropdown-list">
         <label>Categoria</label>
         <select onChange={(value) => handleChange('category', value.target.value)} required={true} value={formValues.category}>
           <option value=''></option>
           {dataCategory.category.map(category => <option key={category}>{category}</option>)}
         </select>
       </div>
-      <Link to='/'>
-        <button type="submit">Salvar</button>
-      </Link>
+      <button className="button-submit" type='submit'>Salvar Vídeo</button>
     </form>
   );
 }

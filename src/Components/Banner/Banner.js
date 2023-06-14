@@ -3,9 +3,9 @@ import './Banner.css';
 
 const Banner = ({dataCss}) => {
   return (
-    <>
-      <img src={dataCss.bannerImage} alt='Banner'/>
-    </>
+      <>
+        <img className='banner-img' src={dataCss.bannerImage} alt='Banner'/>
+      </>
   );
 }
 

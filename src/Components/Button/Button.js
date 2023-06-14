@@ -3,10 +3,10 @@ import './Button.css';
 
 const Button = ({ text, onClick, dataCSS }) => {
   return (
-    <button onClick={onClick}>
+    <button className='button' onClick={onClick}>
       {text}
     </button>
   );
-};
+};  
 
 export default Button;

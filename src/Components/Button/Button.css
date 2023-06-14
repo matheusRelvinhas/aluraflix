@@ -1,0 +1,26 @@
+.button {
+  width: 100%;
+  height: 90px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #e8372d;
+  border: none;
+  border-bottom-left-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #c52a23;
+}
+  
+.button-submit:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #e8372d;
+}
+  
+.button-submit:active {
+  background-color: #a8211e;
+}

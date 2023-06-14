@@ -10,14 +10,20 @@ const Header = () => {
   const { dataCss } = useContext(MyContext);
   
   return (
-    <header style={{background: dataCss.primaryColor}}>
-      <div>
-        <Link to='/'><img src={dataCss.logoImage} alt='Logo'/></Link>
-        <Link to='/newVideo'>
-          <Button text="Novo vídeo" />
-        </Link>
+    <header className='header' style={{background: dataCss.primaryColor}}>
+      <div className='header-container' >
+        <div>
+          <Link to='/'><img className='header-logo' src={dataCss.logoImage} alt='Logo'/></Link>
+        </div>
+        <div className='header-buttom'>
+          <Link to='/newVideo'>
+            <Button text="Novo vídeo" />
+          </Link>
+        </div>
       </div>
-      <Banner dataCss={dataCss}/>
+      <div className='header-banner'>
+        <Banner dataCss={dataCss}/>
+      </div>
     </header>
   );
 };

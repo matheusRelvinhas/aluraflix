@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import MyContext from '../../Context/MyContext';
 import VideoCard from '../VideoCard/VideoCard';
+import { v4 as uuidv4 } from 'uuid';
 import './Carousel.css';
 
 const Carousel = () => {
@@ -20,8 +21,8 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carousel">
-      <div>
+    <div className='carousel'>
+      <div className="container-carousel">
         <button className="carousel-button prev" onClick={goToPreviousSlide}>
           &#8249;
         </button>
@@ -29,15 +30,15 @@ const Carousel = () => {
         <button className="carousel-button next" onClick={goToNextSlide}>
           &#8250;
         </button>
-        <h2>{dataCategory.category[currentIndex]}</h2>
       </div>
-      <div className='card-content'>
+      <h2>{dataCategory.category[currentIndex]}</h2>
+      <div className='container-cards'>
         {dataFilm[currentIndex].map(card => <VideoCard
           title= {card.title}
           text= {card.text}
           image= {card.image}
           video={card.video}
-          key={card.title}
+          key={uuidv4()}
         />)}
       </div>
     </div>

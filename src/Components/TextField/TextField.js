@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './TextField.css';
 
 function TextField({ label, value, onChange }) {
@@ -7,9 +6,9 @@ function TextField({ label, value, onChange }) {
   };
   
   return (
-    <div>
-      <label>{label}</label>
-      <input type="text" value={value} onChange={handleChange} required={true} />
+    <div className='textField'>
+      <label className='label'>{label}</label>
+      <input className='input' type="text" value={value} onChange={handleChange} required={true} />
     </div>
   );
 }

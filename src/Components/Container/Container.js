@@ -1,15 +1,20 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
+import './Container.css';
 
 const Container = ({ main }) => {
   return (
-    <div>
-      <Header />      
-      <main>
+    <div className='container'>
+      <div>
+        <Header />
+      </div>    
+      <main className='main'>
         {main}
       </main>
-      <Footer />
+      <div className='container-footer'>
+        <Footer />
+      </div>
     </div>
   );
 };

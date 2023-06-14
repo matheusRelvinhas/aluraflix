@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 115vh;
+}
+
+.container-footer {
+  margin-top: auto;
+}
