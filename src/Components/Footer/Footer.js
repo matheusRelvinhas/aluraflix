@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import MyContext from '../../Context/MyContext';
 import { v4 as uuidv4 } from 'uuid';
 import './Footer.css';
@@ -8,9 +9,12 @@ const Footer = () => {
   const { dataCss, dataIcon } = useContext(MyContext);
 
   return (
-    <footer className='footer' style={{background: dataCss.primaryColor}}>
+    <footer className='footer' style={{
+      background: dataCss.primaryColor,
+      color: dataCss.secundaryColor
+    }}>
       <div className='footer-container'>    
-        <section>
+        <section className='footer-icon'>
           <ul>
             {dataIcon.map(icon => <li key={uuidv4()}>
               <a href={icon.url}>
@@ -20,12 +24,14 @@ const Footer = () => {
           </ul>
         </section>
         <section>
-          <img className='logo' src={dataCss.logoImage} alt='logo'/>
+          <Link to='/'>
+            <img className='logo' src={dataCss.logoImage} alt='logo'/>
+          </Link>
         </section>
         <section className='footer-text'>
-          <h3>
-            Copia não hein comédia
-          </h3>
+          <h5>
+            <a href='https://github.com/matheusRelvinhas/'>matheusRelvinhas</a>
+          </h5>
         </section>
       </div>
     </footer>

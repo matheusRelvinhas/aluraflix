@@ -31,7 +31,6 @@ const Carousel = () => {
           &#8250;
         </button>
       </div>
-      <h2>{dataCategory.category[currentIndex]}</h2>
       <div className='container-cards'>
         {dataFilm[currentIndex].map(card => <VideoCard
           title= {card.title}

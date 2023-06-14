@@ -13,6 +13,7 @@
   width: 90%;
   padding: 8px;
   font-size: 14px;
-  border: 1px solid #ccc;
+  background-color: #dddddd;
+  border: 1px solid #252525;
   border-radius: 4px;
 }

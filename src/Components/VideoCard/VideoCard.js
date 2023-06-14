@@ -5,7 +5,7 @@ import './VideoCard.css';
 
 const VideoCard = ({title , text, image, video}) => {
   
-  const { addCurrentVideo } = useContext(MyContext);
+  const { addCurrentVideo, dataCss } = useContext(MyContext);
   
   const addVideo = {
     title: title,
@@ -15,7 +15,10 @@ const VideoCard = ({title , text, image, video}) => {
   }
 
   return (
-    <div className='card'>
+    <div className='card' style={{
+      background: dataCss.primaryColor,
+      color: dataCss.secundaryColor
+    }}>
       <Link
         to='/videoPage'
         onClick={() => addCurrentVideo(addVideo)}
@@ -23,7 +26,6 @@ const VideoCard = ({title , text, image, video}) => {
         <img src={image} alt='video-img' className='card-image'/> 
         <div className='card-content'>
           <h3 className='card-title'>{title}</h3>
-          <p className='card-description'>{text}</p>
         </div>
       </Link>
     </div>

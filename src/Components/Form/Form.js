@@ -6,7 +6,7 @@ import './Form.css';
 
 function Form() {
  
-  const { dataCategory, addData, dataFilm } = useContext(MyContext);
+  const { dataCategory, addData, dataFilm, dataCss } = useContext(MyContext);
   const navigate = useNavigate();
 
   const [formValues, setFormValues] = useState({
@@ -39,26 +39,36 @@ function Form() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='form'>
+    <form onSubmit={handleSubmit} className='form' style={{
+      background: dataCss.primaryColor,
+      color: dataCss.secundaryColor
+    }} >
+      <div className='form-title'>
+        <h2>Adicionar Vídeo</h2>
+      </div>
       <TextField
-        label="Nome"
+        label='Nome'
         value={formValues.title}
         onChange={(value) => handleChange('title', value)}
+        placeholder='título do vídeo'
       />
       <TextField
         label="Descrição"
         value={formValues.text}
         onChange={(value) => handleChange('text', value)}
+        placeholder='sinopse do vídeo'
       />
       <TextField
         label="Imagem"
         value={formValues.image}
         onChange={(value) => handleChange('image', value)}
+        placeholder='url da imagem do vídeo'
       />
       <TextField
         label="Vídeo"
         value={formValues.video}
         onChange={(value) => handleChange('video', value)}
+        placeholder='url do vídeo'
       />
       <div className="dropdown-list">
         <label>Categoria</label>
