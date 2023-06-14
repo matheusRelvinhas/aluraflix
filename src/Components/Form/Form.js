@@ -35,7 +35,7 @@ function Form() {
       video: '',
       category:''
     });
-    navigate('/'); // volta para página inical
+    navigate('/aluraflix'); // volta para página inical
   };
 
   return (

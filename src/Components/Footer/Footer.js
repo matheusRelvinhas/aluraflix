@@ -24,7 +24,7 @@ const Footer = () => {
           </ul>
         </section>
         <section>
-          <Link to='/'>
+          <Link to='/aluraflix'>
             <img className='logo' src={dataCss.logoImage} alt='logo'/>
           </Link>
         </section>

@@ -20,7 +20,7 @@ const VideoCard = ({title , text, image, video}) => {
       color: dataCss.secundaryColor
     }}>
       <Link
-        to='/videoPage'
+        to='/aluraflix/videoPage'
         onClick={() => addCurrentVideo(addVideo)}
       >
         <img src={image} alt='video-img' className='card-image'/> 

@@ -13,10 +13,10 @@ const Header = () => {
     <header className='header' style={{background: dataCss.primaryColor}}>
       <div className='header-container' >
         <div>
-          <Link to='/'><img className='header-logo' src={dataCss.logoImage} alt='Logo'/></Link>
+          <Link to='/aluraflix'><img className='header-logo' src={dataCss.logoImage} alt='Logo'/></Link>
         </div>
         <div className='header-buttom'>
-          <Link to='/newVideo'>
+          <Link to='/aluraflix/newVideo'>
             <Button text="Novo vídeo" />
           </Link>
         </div>

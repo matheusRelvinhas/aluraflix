@@ -137,9 +137,9 @@ function App() {
       <Router>
         <MyContext.Provider value={sharedData}>
           <Routes>
-            <Route path='/' element={<HomePage />}/>
-            <Route path='/newVideo' element={<NewVideo />}/>
-            <Route path='/videoPage' element={<VideoPage />}/>
+            <Route path='/aluraflix' element={<HomePage />}/>
+            <Route path='/aluraflix/newVideo' element={<NewVideo />}/>
+            <Route path='/aluraflix/videoPage' element={<VideoPage />}/>
           </Routes>
         </MyContext.Provider>
       </Router>
